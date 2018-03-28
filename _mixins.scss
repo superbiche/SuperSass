@@ -1,3 +1,4 @@
+@import "config";
 /* -----------------------------------------------
 
 Andy.SCSS: Open-Source Collection of Useful SASS Mixins Library.
@@ -676,44 +677,50 @@ Mixins available:
   }
 }
 
+@mixin size-xs {
+  @include size-sm-down {
+    @content;
+  }
+}
+
 @mixin size-sm-down {
-  @media (max-width: 479px) {
+  @media (max-width: $super--size-sm) {
     @content;
   }
 }
 
 @mixin size-sm {
-  @media (min-width: 480px) {
+  @media (min-width: $super--size-sm) {
     @content;
   }
 }
 
 @mixin size-md-down {
-  @media (max-width: 767px) {
+  @media (max-width: $super--size-md - 1px) {
     @content;
   }
 }
 
 @mixin size-md {
-  @media (min-width: 768px) {
+  @media (min-width: $super--size-md) {
     @content;
   }
 }
 
 @mixin size-lg-down {
-  @media (max-width: 990px) {
+  @media (max-width: $super--size-lg - 1px) {
     @content;
   }
 }
 
 @mixin size-lg {
-  @media (min-width: 991px) {
+  @media (min-width: $super--size-lg) {
     @content;
   }
 }
 
 @mixin size-xl {
-  @media (min-width: 1199px) {
+  @media (min-width: $super--size-xl - 1px) {
     @content;
   }
 }
@@ -763,6 +770,13 @@ Mixins available:
   width: 1px !important;
 }
 
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
 /**
  * A mixin which helps you to add depth to elements according to the Google Material Design spec:
  * http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality
@@ -828,5 +842,21 @@ Mixins available:
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   } @else if $level == 5 {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
   }
 }

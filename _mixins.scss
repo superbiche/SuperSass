@@ -870,3 +870,20 @@ Mixins available:
     border-radius: 0;
     background-color: transparent;
 }
+
+
+$base-font-size: 16 !default;
+
+@function em($pixels, $context: $base-font-size) {
+  @return #{$pixels/$context}em
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}

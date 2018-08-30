@@ -1,2 +1,8 @@
 @import 'mixins';
 @import 'animations';
+@import 'helpers';
+
+.sb-largeLink {
+  cursor: pointer;
+  pointer-events: bounding-box;
+}

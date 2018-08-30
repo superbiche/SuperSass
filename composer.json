@@ -1,0 +1,14 @@
+{
+    "name": "superbiche/supersass",
+    "description": "A set of Sass helpers, mixins and functions + an optional grid (Grillade) to use as a Sass toolbox for any project",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michel Tomas",
+            "email": "michel@superbiche.co"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

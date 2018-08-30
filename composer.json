@@ -1,7 +1,7 @@
 {
     "name": "superbiche/supersass",
     "description": "A set of Sass helpers, mixins and functions + an optional grid (Grillade) to use as a Sass toolbox for any project",
-    "type": "sb-styles-library",
+    "type": "laravel-library",
     "license": "MIT",
     "authors": [
         {
@@ -10,5 +10,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "composer/installers": "^1.5"
+    }
 }

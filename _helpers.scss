@@ -34,3 +34,11 @@
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
+%link-reset {
+  &, &:visited, &:link {
+    text-decoration: none;
+    color: inherit;
+    outline: none !important;
+  }
+}

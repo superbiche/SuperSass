@@ -1,4 +1,4 @@
-%btn-reset {
+@mixin btn-reset {
   background: none;
   border: 0;
   color: inherit;
@@ -19,8 +19,18 @@
   }
 }
 
+%btn-reset {
+  @include btn-reset;  
+}
+
+// @deprecated
+// use .sb-btnReset instead
 .btn-reset {
-  @extend %btn-reset;
+  @include btn-reset;
+}
+
+.sb-btnReset {
+  @extend %btn-reset; 
 }
 
 [role="button"] {
@@ -35,10 +45,14 @@
   -ms-user-select: none;
 }
 
-%link-reset {
+@mixin link-reset {
   &, &:visited, &:link {
     text-decoration: none;
     color: inherit;
     outline: none !important;
   }
+}
+
+.sb-linkReset {
+  @include link-reset;
 }

@@ -1,0 +1,9 @@
+{
+  "name": "@superbiche/supersass",
+  "version": "0.1.0",
+  "description": "Superbiche SASS toolkit",
+  "repository": "ssh://github/superbiche/SuperSass.git",
+  "author": "Michel Tomas <michel@superbiche.co>",
+  "license": "MIT",
+  "private": false
+}
